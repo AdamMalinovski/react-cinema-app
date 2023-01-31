@@ -122,18 +122,10 @@ workflows:
         #         - main
         #         - staging
         #         - develop
-        - prettier:
-            requires:
-              - build
-            filters:
-              branches:
-                only:
-                  - main
-                  - staging
-                  - develop
+        # - prettier:
         - deploy-to-aws-s3:
             requires:
-              - prettier
+              - build
             filters:
               branches:
                 only:
