@@ -12,10 +12,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "lint": "eslint 'src/**/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier:check": "prettier --check 'src/**/*.{js,jsx,json}'",
+    "prettier:write": "prettier --write 'src/**/*.{js,jsx,json}'"
   },
   "eslintConfig": {
     "extends": [
@@ -32,7 +35,12 @@
     "development": [
       "last 1 chrome version",
       "last 1 firefox version"
-
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-n": "^15.6.1",
+    "prettier": "^2.8.3"
   }
 }
